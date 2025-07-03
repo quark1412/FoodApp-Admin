@@ -36,7 +36,7 @@ export const Toast = forwardRef(
   ({ duration = 2000, animationDuration = 300 }: ToastProps, ref) => {
     const translateY = useRef(new Animated.Value(-100)).current;
     const opacity = useRef(new Animated.Value(0)).current;
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Store the timeout ID
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null); // Store the timeout ID
     const [message, setMessage] = useState("");
     const [icon, setIcon] = useState<string>("information-circle-outline");
     const [backgroundColor, setBackgroundColor] = useState("#2196f3");

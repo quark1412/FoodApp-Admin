@@ -1,10 +1,8 @@
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import { AdminGuard } from "@/components/AdminGuard";
 
 export default function RootLayout() {
   return (
-    // <AdminGuard>
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -116,6 +114,5 @@ export default function RootLayout() {
         }}
       />
     </Tabs>
-    // </AdminGuard>
   );
 }
